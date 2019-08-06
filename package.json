@@ -1,0 +1,56 @@
+{
+  "name": "yo-notifier",
+  "display_name": "Yo",
+  "version": "0.1.0",
+  "description": "Send a Yo to your phone (gateway >= 0.9.0 only)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-hellhake/yo-notifier.git"
+  },
+  "author": "Tim Hellhake",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tim-hellhake/yo-notifier/issues"
+  },
+  "homepage": "https://github.com/tim-hellhake/yo-notifier#readme",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "lib/index.js",
+    "lib/yo-notifier.js"
+  ],
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "schema": {
+      "type": "object",
+      "required": [
+        "apiToken"
+      ],
+      "properties": {
+        "apiToken": {
+          "type": "string",
+          "title": "The api token"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.5.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3",
+    "@types/node": "^12.6.9"
+  }
+}
