@@ -10,5 +10,5 @@ Send a Yo to your phone (gateway >= 0.9.0 only).
 
 ## Usage
 * Go to https://dev.justyo.co/
-* Click on `View API key``
+* Click on `View API key`
 * Add the key to the config

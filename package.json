@@ -32,6 +32,7 @@
     },
     "plugin": true,
     "exec": "{nodeLoader} {path}",
+    "type": "notifier",
     "schema": {
       "type": "object",
       "required": [
