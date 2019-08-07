@@ -34,7 +34,7 @@ class YoOutlet extends Outlet {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: `api_token=${apiToken}&username=${username}&text=${message}`
+            body: `api_token=${apiToken}&username=${username}&text=${encodeURIComponent(message)}`
         });
     }
 }
