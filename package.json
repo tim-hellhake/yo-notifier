@@ -1,7 +1,7 @@
 {
   "name": "yo-notifier",
   "display_name": "Yo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Send a Yo to your phone (gateway >= 0.9.0 only)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
