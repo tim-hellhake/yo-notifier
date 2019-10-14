@@ -23,7 +23,8 @@
     "LICENSE",
     "SHA256SUMS",
     "lib/index.js",
-    "lib/yo-notifier.js"
+    "lib/yo-notifier.js",
+    "manifest.json"
   ],
   "moziot": {
     "api": {
