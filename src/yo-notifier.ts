@@ -29,13 +29,17 @@ class YoOutlet extends Outlet {
 
         console.log(`Sending yo to ${username}`);
 
-        await fetch('https://api.justyo.co/yo/', {
+        const response = await fetch('https://api.justyo.co/yo/', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: `api_token=${apiToken}&username=${username}&text=${encodeURIComponent(message)}`
         });
+
+        if (response.status != 200) {
+            console.log(`Could not notify user: ${response.statusText} (${response.status})`);
+        }
     }
 }
 
