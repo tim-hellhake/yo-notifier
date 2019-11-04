@@ -21,11 +21,16 @@ class YoOutlet extends Outlet {
             apiToken
         } = this.manifest.moziot.config;
 
-        const user = await fetch(`http://api.justyo.co/me/\?api_token=${apiToken}`);
+        const userResponse = await fetch(`http://api.justyo.co/me/\?api_token=${apiToken}`);
+
+        if (userResponse.status != 200) {
+            console.log(`Could not get user: ${userResponse.statusText} (${userResponse.status})`);
+            return;
+        }
 
         const {
             username
-        } = await user.json();
+        } = await userResponse.json();
 
         console.log(`Sending yo to ${username}`);
 
