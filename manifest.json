@@ -3,7 +3,7 @@
   "id": "yo-notifier",
   "name": "Yo",
   "short_name": "Yo",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Send a Yo to your phone",
   "homepage_url": "https://github.com/tim-hellhake/yo-notifier#readme",
   "license": "MPL-2.0",
